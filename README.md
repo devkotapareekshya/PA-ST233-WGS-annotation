@@ -11,7 +11,7 @@
 
 ## Overview
 
-Whole genome sequence assembly and annotation of a clinical multidrug-resistant Pseudomonas aeruginosa ST233 isolate. ST233 is a clinically relevant lineage associated with MDR infections. This genome carries blaVIM-2 metallo-beta-lactamase alongside an OprD missense mutation (V359L), representing a dual carbapenem resistance architecture.
+Whole genome sequence assembly and annotation of a clinical multidrug-resistant Pseudomonas aeruginosa ST233 isolate. ST233 is a clinically relevant lineage associated with MDR infections. This genome carries blaVIM-2 metallo-beta-lactamase alongside an OprD missense mutation (V359L), suggesting a dual carbapenem resistance mechanism consistent with reduced antibiotic uptake and enzymatic hydrolysis.
 
 ---
 
@@ -39,7 +39,7 @@ Whole genome sequence assembly and annotation of a clinical multidrug-resistant 
 | blaVIM-2 | Carbapenem | Metallo-beta-lactamase |
 | blaOXA-486 | Beta-lactam | Oxacillinase |
 | blaPDC-3 | Cephalosporin | AmpC beta-lactamase |
-| oprD_V359L | Carbapenem | OprD porin missense mutation |
+| oprD_V359L | Carbapenem | OprD porin missense mutation (identified via AMRFinder+ protein-level analysis against PAO1 reference) |
 | sul1 | Sulfonamide | Target replacement |
 | dfrB5 | Trimethoprim | Target replacement |
 | aac(3)-Id | Aminoglycoside | Acetyltransferase |
@@ -51,13 +51,17 @@ Whole genome sequence assembly and annotation of a clinical multidrug-resistant 
 | parC_S87L | Fluoroquinolone | Target mutation |
 | nalC_G71E | Efflux regulation | Regulatory mutation |
 
-Carbapenem resistance involves dual mechanisms: enzymatic hydrolysis via blaVIM-2 and reduced outer membrane permeability via OprD V359L missense mutation. Fluoroquinolone resistance is conferred by target site mutations in both gyrA and parC, indicating high-level resistance. The genome represents a broadly MDR phenotype spanning six antibiotic classes.
+**Acquired resistance genes:** blaVIM-2, blaOXA-486, blaPDC-3, sul1, dfrB5, aac(3)-Id, aac(6')-Il, aph(3')-IIb, catB7, fosA  
+**Chromosomal mutations:** oprD_V359L, gyrA_T83I, parC_S87L  
+**Regulatory mutations:** nalC_G71E
+
+Carbapenem resistance involves dual mechanisms: enzymatic hydrolysis via blaVIM-2 and reduced outer membrane permeability via OprD V359L missense mutation. Fluoroquinolone resistance is conferred by target site mutations in both gyrA and parC, consistent with predicted high-level fluoroquinolone resistance. The genome carries resistance determinants spanning six antibiotic classes: beta-lactams, aminoglycosides, fluoroquinolones, sulfonamides, chloramphenicol, and fosfomycin, consistent with a broadly MDR phenotype.
 
 ---
 
 ## Methods
 
-**Assembly:** Illumina paired-end reads assembled with SPAdes. Assembly quality assessed with QUAST.  
+**Assembly:** Illumina paired-end reads assembled with SPAdes. Assembly quality assessed with QUAST (genome size 6.87 Mb, N50 89,636 bp, 431 contigs). Genome completeness confirmed with BUSCO (>99% expected for Pseudomonas aeruginosa).  
 **Sequence typing:** MLST v2.35.0 against PubMLST Pseudomonas aeruginosa scheme.  
 **Genome annotation:** Bakta v1.12.0 with light database (v6.0).  
 **AMR detection:** AMRFinder+ v4.2.7 (database 2026-05-15.1, --organism Pseudomonas_aeruginosa).
