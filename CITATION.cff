@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+type: dataset
+authors:
+  - family-names: Devkota
+    given-names: Pareekshya
+    orcid: https://orcid.org/0009-0003-8645-0626
+    affiliation: "Tri-Chandra Multiple Campus, Tribhuvan University, Kathmandu, Nepal"
+title: "PA-ST233-WGS-annotation: Whole genome sequence annotation of MDR Pseudomonas aeruginosa ST233"
+version: 1.0.0
+date-released: 2026-06-21
+url: "https://github.com/devkotapareekshya/PA-ST233-WGS-annotation"
+license: MIT
+keywords:
+  - Pseudomonas aeruginosa
+  - ST233
+  - carbapenem resistance
+  - OprD
+  - AMR
+  - genome annotation
+  - Bakta
